@@ -1,24 +1,30 @@
 import * as React from 'react';
 // import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
-import { Typography } from '@mui/material';
+import { Stack, Typography } from '@mui/material';
 
-const SliderComponent = ({def, min, max, step, onChange, value}) => {
+const SliderComponent = ({def, min, max, step, onChange, value, lable, unit, amount}) => {
   return (
     <>
-        <Typography variant='subtitle2'>Home Value</Typography>
-        <Typography variant='h5'>$ {onChange}</Typography>
-            <Slider 
-                defaultValue={def} 
-                min={min} max={max} 
-                aria-label="Default" 
-                valueLabelDisplay="auto" 
-                step={step}
-                marks
-                onChange={onChange}
-                value={value}
-            />
-        <Typography></Typography>
+        <Stack gap={1}>
+            <Typography variant='subtitle2'>{lable}</Typography>
+            <Typography variant='h5'>{unit} {amount}</Typography>
+        </Stack>
+    
+        <Slider 
+            defaultValue={def} 
+            min={min} max={max} 
+            aria-label="Default" 
+            valueLabelDisplay="auto" 
+            step={step}
+            marks
+            onChange={onChange}
+            value={value}
+        />
+        <Stack direction="row" justifyContent="space-between">
+            <Typography variant='caption' color="text.secondary">$ 1000</Typography>
+            <Typography variant='caption' color="text.secondary">$ 10000</Typography>
+        </Stack>
     </>
       
   );
