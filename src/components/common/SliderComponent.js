@@ -1,9 +1,13 @@
-import React from 'react'
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import Slider from '@mui/material/Slider';
 
 const SliderComponent = () => {
   return (
-    <div>SliderComponent</div>
-  )
+    <Box sx={{ width: 300 }}>
+      <Slider defaultValue={50} aria-label="Default" valueLabelDisplay="auto" />
+    </Box>
+  );
 }
 
-export default SliderComponent
+export default SliderComponent;
