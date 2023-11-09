@@ -1,19 +1,26 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
+// import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
+import { Typography } from '@mui/material';
 
-const SliderComponent = ({def, min, max}) => {
+const SliderComponent = ({def, min, max, step, onChange, value}) => {
   return (
-    <Box sx={{ width: 400 }}>
-      <Slider 
-        defaultValue={def} 
-        min={min} max={max} 
-        aria-label="Default" 
-        valueLabelDisplay="auto" 
-        step={10}
-        marks
-      />
-    </Box>
+    <>
+        <Typography variant='subtitle2'>Home Value</Typography>
+        <Typography variant='h5'>$ {onChange}</Typography>
+            <Slider 
+                defaultValue={def} 
+                min={min} max={max} 
+                aria-label="Default" 
+                valueLabelDisplay="auto" 
+                step={step}
+                marks
+                onChange={onChange}
+                value={value}
+            />
+        <Typography></Typography>
+    </>
+      
   );
 }
 
