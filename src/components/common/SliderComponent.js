@@ -22,8 +22,8 @@ const SliderComponent = ({def, min, max, step, onChange, value, lable, unit, amo
             value={value}
         />
         <Stack direction="row" justifyContent="space-between">
-            <Typography variant='caption' color="text.secondary">$ 1000</Typography>
-            <Typography variant='caption' color="text.secondary">$ 10000</Typography>
+            <Typography variant='caption' color="text.secondary">{unit} {min}</Typography>
+            <Typography variant='caption' color="text.secondary">{unit} {max}</Typography>
         </Stack>
     </>
       
