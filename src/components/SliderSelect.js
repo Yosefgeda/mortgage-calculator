@@ -56,7 +56,7 @@ const SliderSelect = ({data, setData}) => {
           value={data.interestRate}
           min={2} 
           max={18} 
-          step={1} 
+          step={0.5} 
           onChange={(e, value) => setData({
             ...data,
             interestRate: value
