@@ -46,7 +46,11 @@ const Result = ({data}) => {
       <Typography textAlign='center' variant='h5'>
         Monthly Payment: $ {monthlyPayment.toFixed(2)}
       </Typography>
-      <Pie data={pieChartData} />
+      <Stack direction='row' justifyContent='center'>
+        <div>
+          <Pie data={pieChartData} />
+        </div>
+      </Stack>
     </Stack>
   )
 }
