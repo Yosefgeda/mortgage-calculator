@@ -1,6 +1,8 @@
 import React from 'react'
 
-const Result = () => {
+const Result = ({data}) => {
+  const { homeValue, downPayment, loanAmount, loanTerm, interestRate } = data
+  
   return (
     <div>Result</div>
   )
