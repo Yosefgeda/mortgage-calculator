@@ -9,7 +9,8 @@ function App() {
     homeValue: 3000,
     downPayment: 3000,
     loanAmount: 3000,
-    loanTerm: 3000
+    loanTerm: 3000,
+    interestRate: 5,
   });
 
   return (

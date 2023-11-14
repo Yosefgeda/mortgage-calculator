@@ -52,13 +52,17 @@ const SliderSelect = ({data, setData}) => {
 
         <SliderComponent
           lable={"Interest Rate"}
-          def={70} 
-          min={0} 
-          max={100} 
-          step={5} 
-          onChange={(e) => console.log(e.target.value)}
-          unit={"$"}
-          amount={data.homeValue}
+          def={data.interestRate}
+          value={data.interestRate}
+          min={2} 
+          max={18} 
+          step={1} 
+          onChange={(e, value) => setData({
+            ...data,
+            interestRate: value
+          })}
+          unit={"%"}
+          amount={data.interestRate}
         />
     </>
     
