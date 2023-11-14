@@ -1,9 +1,8 @@
 import * as React from 'react';
-// import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
 import { Stack, Typography } from '@mui/material';
 
-const SliderComponent = ({ def, min, max, step, value, lable, unit, amount }) => {
+const SliderComponent = ({ def, min, max, step, value, lable, unit, amount, onChange }) => {
   return (
     <Stack my={1}>
         <Stack gap={0}>
@@ -16,10 +15,11 @@ const SliderComponent = ({ def, min, max, step, value, lable, unit, amount }) =>
             min={min} 
             max={max} 
             aria-label="Default" 
-            valueLabelDisplay="auto" 
-            step={step}
-            marks
+            valueLabelDisplay="auto"
+            onChange={onChange}
             value={value}
+            marks
+            step={step}
         />
         <Stack direction="row" justifyContent="space-between">
             <Typography variant='caption' color="text.secondary">{unit} {min}</Typography>
