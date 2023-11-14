@@ -23,11 +23,11 @@ const Result = ({data}) => {
   const totalInterestGenerated = monthlyPayment + totalLoanMonths + loanAmount;
 
   const pieChartData = {
-    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+    labels: ['Principal', 'Interest'],
     datasets: [
       {
-        label: '# of Votes',
-        data: [12, 19, 3, 5, 2, 3],
+        label: 'Ratio of Principal and Interest',
+        data: [homeValue, totalInterestGenerated],
         backgroundColor: [
           'rgba(255, 99, 132, 0.2)',
           'rgba(54, 162, 235, 0.2)',
@@ -54,6 +54,7 @@ const Result = ({data}) => {
       <Typography textAlign='center' variant='h5'>
         Monthly Payment: $ {monthlyPayment.toFixed(2)}
       </Typography>
+      <Pie data={pieChartData} />
     </Stack>
   )
 }
