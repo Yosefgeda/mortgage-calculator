@@ -3,22 +3,22 @@ import * as React from 'react';
 import Slider from '@mui/material/Slider';
 import { Stack, Typography } from '@mui/material';
 
-const SliderComponent = ({def, min, max, step, onChange, value, lable, unit, amount}) => {
+const SliderComponent = ({ def, min, max, step, value, lable, unit, amount }) => {
   return (
-    <Stack my={1.4}>
-        <Stack gap={1}>
+    <Stack my={1}>
+        <Stack gap={0}>
             <Typography variant='subtitle2'>{lable}</Typography>
             <Typography variant='h5'>{unit} {amount}</Typography>
         </Stack>
     
         <Slider 
             defaultValue={def} 
-            min={min} max={max} 
+            min={min} 
+            max={max} 
             aria-label="Default" 
             valueLabelDisplay="auto" 
             step={step}
             marks
-            onChange={onChange}
             value={value}
         />
         <Stack direction="row" justifyContent="space-between">
