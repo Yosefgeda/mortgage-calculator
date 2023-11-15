@@ -65,7 +65,7 @@
 <!-- LIVE DEMO -->
 ## 🚀 Live Demo <a name="live-demo"></a>
 
->You can view the final page on the index.html
+>You can view the final page [HERE](https://mortgage-d2zf.onrender.com).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -97,6 +97,7 @@ To run the project you can use the command 'npm start'.
 
 ### Deployment
 You can view the page by running 'npm start'
+Live Link [HERE](https://mortgage-d2zf.onrender.com).
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
