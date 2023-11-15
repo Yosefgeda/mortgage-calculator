@@ -14,9 +14,9 @@ const SliderSelect = ({data, setData}) => {
           step={100} 
           onChange={(e, value) => setData({
             ...data,
-            downPayment: value * 0.2,
-            loanAmount: value * 0.8,
-            homeValue: value
+            homeValue: value.toFixed(0),
+            downPayment: (0.2 * value).toFixed(0),
+            loanAmount: (0.8 * value).toFixed(0),
           })}
           unit="$"
           amount={data.homeValue}
@@ -31,11 +31,11 @@ const SliderSelect = ({data, setData}) => {
           step={100} 
           onChange={(e, value) => setData({
             ...data,
-            loanAmount: (data.homeValue - value),
-            downPayment: value
+            downPayment: value.toFixed(0),
+            loanAmount: (data.homeValue - value).toFixed(0),
           })}
           unit={"$"}
-          amount={data.homeValue}
+          amount={data.downPayment}
         />
 
         <SliderComponent
@@ -47,8 +47,8 @@ const SliderSelect = ({data, setData}) => {
           step={100} 
           onChange={(e, value) => setData({
             ...data,
-            downPayment: (data.homeValue - value),
-            loanAmount: value
+            loanAmount: value.toFixed(0),
+            downPayment: (data.homeValue - value).toFixed(0),
           })}
           unit={"$"}
           amount={data.loanAmount}
@@ -63,7 +63,7 @@ const SliderSelect = ({data, setData}) => {
           step={0.5} 
           onChange={(e, value) => setData({
             ...data,
-            interestRate: value
+            interestRate: value.toFixed(0)
           })}
           unit={"%"}
           amount={data.interestRate}
